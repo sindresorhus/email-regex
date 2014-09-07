@@ -1,0 +1,38 @@
+{
+  "name": "email-regex",
+  "version": "0.0.0",
+  "description": "Regular expression for matching email addresses",
+  "license": "MIT",
+  "repository": "sindresorhus/email-regex",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "http://sindresorhus.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "text",
+    "string",
+    "regex",
+    "regexp",
+    "re",
+    "match",
+    "test",
+    "find",
+    "pattern",
+    "validate",
+    "email",
+    "address"
+  ],
+  "devDependencies": {
+    "ava": "0.0.4"
+  }
+}
