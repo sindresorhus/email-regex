@@ -34,7 +34,7 @@ emailRegex({exact: true}).test('sindresorhus@gmail.com');
 
 ## API
 
-### isRegex(options)
+### emailRegex(options)
 
 Returns a regex for matching email addresses.
 
