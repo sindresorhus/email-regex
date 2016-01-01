@@ -1,8 +1,7 @@
-'use strict';
-var test = require('ava');
-var emailRegex = require('./');
+import test from 'ava';
+import m from './';
 
-var fixture = [
+const fixture = [
 	'sindresorhus@gmail.com',
 	'foo@bar',
 	'test@about.museum',
@@ -24,10 +23,10 @@ var fixture = [
 	'abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghiklmn@sindresorhus.com',
 	'test@iana.co-uk',
 	'a@a.b.c.d.e.f.g.h.i.j.k.l.m.n.o.p.q.r.s.t.u.v.w.x.y.z.a.b.c.d.e.f.g.h.i.j.k.l.m.n.o.p.q.r.s.t.u.v.w.x.y.z.a.b.c.d.e.f.g.h.i.j.k.l.m.n.o.p.q.r.s.t.u.v.w.x.y.z.a.b.c.d.e.f.g.h.i.j.k.l.m.n.o.p.q.r.s.t.u.v.w.x.y.z.a.b.c.d.e.f.g.h.i.j.k.l.m.n.o.p.q.r.s.t.u.v',
-	'test@foo-bar.com',
+	'test@foo-bar.com'
 ];
 
-var fixtureNot = [
+const fixtureNot = [
 	'@',
 	'@io',
 	'@sindresorhus.com',
@@ -38,18 +37,16 @@ var fixtureNot = [
 	'sindre@sindre@sindre.com'
 ];
 
-test(function (t) {
-	fixture.forEach(function (el) {
-		t.assert(emailRegex({exact: true}).test(el), el);
+test(t => {
+	fixture.forEach(x => {
+		t.true(m({exact: true}).test(x));
 	});
 
-	fixture.forEach(function (el) {
-		t.assert((emailRegex().exec('foo ' + el + ' bar') || [])[0] === el, el);
+	fixture.forEach(x => {
+		t.is((m().exec(`foo ${x} bar`) || [])[0], x);
 	});
 
-	fixtureNot.forEach(function (el) {
-		t.assert(!emailRegex({exact: true}).test(el), el);
+	fixtureNot.forEach(x => {
+		t.false(m({exact: true}).test(x));
 	});
-
-	t.end();
 });
