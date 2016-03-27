@@ -37,15 +37,19 @@ const fixtureNot = [
 	'sindre@sindre@sindre.com'
 ];
 
-test(t => {
-	fixture.forEach(x => {
-		t.true(m({exact: true}).test(x));
-	});
-
+test('extract', t => {
 	fixture.forEach(x => {
 		t.is((m().exec(`foo ${x} bar`) || [])[0], x);
 	});
+});
 
+test('exact', t => {
+	fixture.forEach(x => {
+		t.true(m({exact: true}).test(x));
+	});
+});
+
+test('failures', t => {
 	fixtureNot.forEach(x => {
 		t.false(m({exact: true}).test(x));
 	});
