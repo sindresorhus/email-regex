@@ -40,13 +40,28 @@ Returns a regex for matching email addresses.
 
 #### options
 
+##### matchStart
+
+Type: `boolean`<br>
+Default: `false`
+
+Only match pattern at the beginning of input string.
+
+##### matchEnd
+
+Type: `boolean`<br>
+Default: `false`
+
+Only match pattern at the end of input string.
+
 ##### exact
 
 Type: `boolean`<br>
 Default: `false` *(Matches any email address in a string)*
 
 Only match an exact string.<br>
-Useful with `RegExp#test` to check if a string is an email address.
+Useful with `RegExp#test` to check if a string is an email address.<br>
+This is a shorthand for setting both `matchStart` and `matchEnd` to `true`.
 
 
 ## License
