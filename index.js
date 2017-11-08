@@ -1,6 +1,7 @@
 'use strict';
-module.exports = function (opts) {
-	opts = opts || {};
-	var re = '[^\\.\\s@:][^\\s@:]*(?!\\.)@[^\\.\\s@]+(?:\\.[^\\.\\s@]+)*';
-	return opts.exact ? new RegExp('^' + re + '$') : new RegExp(re, 'g');
+const re = '[^\\.\\s@:][^\\s@:]*(?!\\.)@[^\\.\\s@]+(?:\\.[^\\.\\s@]+)*';
+
+module.exports = options => {
+	options = options || {};
+	return options.exact ? new RegExp(`^${re}$`) : new RegExp(re, 'g');
 };

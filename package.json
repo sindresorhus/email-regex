@@ -1,39 +1,39 @@
 {
-  "name": "email-regex",
-  "version": "1.0.0",
-  "description": "Regular expression for matching email addresses",
-  "license": "MIT",
-  "repository": "sindresorhus/email-regex",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
-  },
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "scripts": {
-    "test": "xo && ava"
-  },
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "text",
-    "string",
-    "regex",
-    "regexp",
-    "re",
-    "match",
-    "test",
-    "find",
-    "pattern",
-    "validate",
-    "email",
-    "address"
-  ],
-  "devDependencies": {
-    "ava": "*",
-    "xo": "*"
-  }
+	"name": "email-regex",
+	"version": "1.0.0",
+	"description": "Regular expression for matching email addresses",
+	"license": "MIT",
+	"repository": "sindresorhus/email-regex",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "sindresorhus.com"
+	},
+	"engines": {
+		"node": ">=4"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"text",
+		"string",
+		"regex",
+		"regexp",
+		"re",
+		"match",
+		"test",
+		"find",
+		"pattern",
+		"validate",
+		"email",
+		"address"
+	],
+	"devDependencies": {
+		"ava": "*",
+		"xo": "*"
+	}
 }

@@ -1,5 +1,5 @@
 import test from 'ava';
-import m from './';
+import m from '.';
 
 const fixture = [
 	'sindresorhus@gmail.com',
@@ -39,21 +39,21 @@ const fixtureNot = [
 ];
 
 test('extract', t => {
-	fixture.forEach(x => {
+	for (const x of fixture) {
 		t.is((m().exec(`foo ${x} bar`) || [])[0], x);
-	});
+	}
 
 	t.is(m().exec('mailto:sindresorhus@gmail.com')[0], 'sindresorhus@gmail.com');
 });
 
 test('exact', t => {
-	fixture.forEach(x => {
+	for (const x of fixture) {
 		t.true(m({exact: true}).test(x));
-	});
+	}
 });
 
 test('failures', t => {
-	fixtureNot.forEach(x => {
+	for (const x of fixtureNot) {
 		t.false(m({exact: true}).test(x));
-	});
+	}
 });

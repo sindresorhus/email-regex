@@ -9,21 +9,21 @@ Use it for finding email addresses or checking if something is email like.
 
 ## Install
 
-```sh
-$ npm install --save email-regex
+```
+$ npm install email-regex
 ```
 
 
 ## Usage
 
 ```js
-var emailRegex = require('email-regex');
+const emailRegex = require('email-regex');
 
-// contains an email address
+// Contains an email address
 emailRegex().test('unicorn sindresorhus@gmail.com');
 //=> true
 
-// is an email address
+// Is an email address
 emailRegex({exact: true}).test('sindresorhus@gmail.com');
 //=> true
 
