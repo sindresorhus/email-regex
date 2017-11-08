@@ -23,7 +23,9 @@ const fixture = [
 	'abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghiklmn@sindresorhus.com',
 	'test@iana.co-uk',
 	'a@a.b.c.d.e.f.g.h.i.j.k.l.m.n.o.p.q.r.s.t.u.v.w.x.y.z.a.b.c.d.e.f.g.h.i.j.k.l.m.n.o.p.q.r.s.t.u.v.w.x.y.z.a.b.c.d.e.f.g.h.i.j.k.l.m.n.o.p.q.r.s.t.u.v.w.x.y.z.a.b.c.d.e.f.g.h.i.j.k.l.m.n.o.p.q.r.s.t.u.v.w.x.y.z.a.b.c.d.e.f.g.h.i.j.k.l.m.n.o.p.q.r.s.t.u.v',
-	'test@foo-bar.com'
+	'test@foo-bar.com',
+	'foo@x.solutions',
+	'foo@[IPv6:2001:db8::2]'
 ];
 
 const fixtureNot = [
@@ -35,7 +37,8 @@ const fixtureNot = [
 	'test@sindresorhus.com.',
 	'.test@sindresorhus.com',
 	'sindre@sindre@sindre.com',
-	'mailto:sindresorhus@gmail.com'
+	'mailto:sindresorhus@gmail.com',
+	'foo.example.com'
 ];
 
 test('extract', t => {
