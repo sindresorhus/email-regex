@@ -34,13 +34,16 @@ const fixtureNot = [
 	'test@iana..com',
 	'test@sindresorhus.com.',
 	'.test@sindresorhus.com',
-	'sindre@sindre@sindre.com'
+	'sindre@sindre@sindre.com',
+	'mailto:sindresorhus@gmail.com'
 ];
 
 test('extract', t => {
 	fixture.forEach(x => {
 		t.is((m().exec(`foo ${x} bar`) || [])[0], x);
 	});
+
+	t.is(m().exec('mailto:sindresorhus@gmail.com')[0], 'sindresorhus@gmail.com');
 });
 
 test('exact', t => {
