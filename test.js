@@ -38,7 +38,8 @@ const fixtureNot = [
 	'.test@sindresorhus.com',
 	'sindre@sindre@sindre.com',
 	'mailto:sindresorhus@gmail.com',
-	'foo.example.com'
+	'foo.example.com',
+	'test.@example.com'
 ];
 
 test('extract', t => {
