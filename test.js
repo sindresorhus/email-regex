@@ -1,7 +1,7 @@
 import test from 'ava';
-import m from '.';
+import emailRegex from '.';
 
-const fixture = [
+const fixtures = [
 	'sindresorhus@gmail.com',
 	'foo@bar',
 	'test@about.museum',
@@ -28,7 +28,7 @@ const fixture = [
 	'foo@[IPv6:2001:db8::2]'
 ];
 
-const fixtureNot = [
+const fixturesNot = [
 	'@',
 	'@io',
 	'@sindresorhus.com',
@@ -43,21 +43,21 @@ const fixtureNot = [
 ];
 
 test('extract', t => {
-	for (const x of fixture) {
-		t.is((m().exec(`foo ${x} bar`) || [])[0], x);
+	for (const fixture of fixtures) {
+		t.is((emailRegex().exec(`foo ${fixture} bar`) || [])[0], fixture);
 	}
 
-	t.is(m().exec('mailto:sindresorhus@gmail.com')[0], 'sindresorhus@gmail.com');
+	t.is(emailRegex().exec('mailto:sindresorhus@gmail.com')[0], 'sindresorhus@gmail.com');
 });
 
 test('exact', t => {
-	for (const x of fixture) {
-		t.true(m({exact: true}).test(x));
+	for (const fixture of fixtures) {
+		t.true(emailRegex({exact: true}).test(fixture));
 	}
 });
 
 test('failures', t => {
-	for (const x of fixtureNot) {
-		t.false(m({exact: true}).test(x));
+	for (const fixture of fixturesNot) {
+		t.false(emailRegex({exact: true}).test(fixture));
 	}
 });

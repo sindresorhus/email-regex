@@ -1,5 +1,5 @@
 'use strict';
 
-const re = '[^\\.\\s@:](?:[^\\s@:]*[^\\s@:\\.])?@[^\\.\\s@]+(?:\\.[^\\.\\s@]+)*';
+const regex = '[^\\.\\s@:](?:[^\\s@:]*[^\\s@:\\.])?@[^\\.\\s@]+(?:\\.[^\\.\\s@]+)*';
 
-module.exports = (options = {}) => options.exact ? new RegExp(`^${re}$`) : new RegExp(re, 'g');
+module.exports = ({exact} = {}) => exact ? new RegExp(`^${regex}$`) : new RegExp(regex, 'g');

@@ -34,11 +34,13 @@ emailRegex({exact: true}).test('sindresorhus@gmail.com');
 
 ## API
 
-### emailRegex([options])
+### emailRegex(options?)
 
 Returns a regex for matching email addresses.
 
 #### options
+
+Type: `object`
 
 ##### exact
 
@@ -47,8 +49,3 @@ Default: `false` *(Matches any email address in a string)*
 
 Only match an exact string.<br>
 Useful with `RegExp#test` to check if a string is an email address.
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)

@@ -1,8 +1,6 @@
-import {expectType} from 'tsd-check';
-import emailRegex from '.';
+import {expectType} from 'tsd';
+import emailRegex = require('.');
 
-(async () => {
-	expectType<RegExp>(emailRegex());
-	expectType<RegExp>(emailRegex({}));
-	expectType<RegExp>(emailRegex({ exact: true }));
-})();
+expectType<RegExp>(emailRegex());
+expectType<RegExp>(emailRegex({}));
+expectType<RegExp>(emailRegex({exact: true}));
