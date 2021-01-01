@@ -1,4 +1,4 @@
-# email-regex [![Build Status](https://travis-ci.org/sindresorhus/email-regex.svg?branch=master)](https://travis-ci.org/sindresorhus/email-regex)
+# email-regex
 
 > Regular expression for matching email addresses
 
