@@ -1,5 +1,5 @@
 import test from 'ava';
-import emailRegex from '.';
+import emailRegex from './index.js';
 
 const fixtures = [
 	'sindresorhus@gmail.com',

@@ -6,18 +6,16 @@ Use it for finding email addresses or checking if something is email like.
 
 [You shouldn't use this for validating emails.](http://davidcel.is/blog/2012/09/06/stop-validating-email-addresses-with-regex/) Only for hinting to the user.
 
-
 ## Install
 
 ```
 $ npm install email-regex
 ```
 
-
 ## Usage
 
 ```js
-const emailRegex = require('email-regex');
+import emailRegex from 'email-regex';
 
 // Contains an email address
 emailRegex().test('unicorn sindresorhus@gmail.com');
@@ -31,7 +29,6 @@ emailRegex({exact: true}).test('sindresorhus@gmail.com');
 //=> ['sindresorhus@gmail.com', 'john@doe.com']
 ```
 
-
 ## API
 
 ### emailRegex(options?)
@@ -44,8 +41,9 @@ Type: `object`
 
 ##### exact
 
-Type: `boolean`<br>
+Type: `boolean`\
 Default: `false` *(Matches any email address in a string)*
 
-Only match an exact string.<br>
+Only match an exact string.
+
 Useful with `RegExp#test` to check if a string is an email address.

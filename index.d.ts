@@ -1,14 +1,12 @@
-declare namespace emailRegex {
-	export interface Options {
-		/**
-		Only match an exact string.
+export interface Options {
+	/**
+	Only match an exact string.
 
-		Useful with `RegExp#test` to check if a string is an email address.
+	Useful with `RegExp#test` to check if a string is an email address.
 
-		@default false
-		*/
-		exact?: boolean
-	}
+	@default false
+	*/
+	readonly exact?: boolean;
 }
 
 /**
@@ -18,7 +16,7 @@ Use it for finding email addresses or checking if something is email like. [You 
 
 @example
 ```
-import emailRegex = require('email-regex');
+import emailRegex from 'email-regex';
 
 // Contains an email address
 emailRegex().test('unicorn sindresorhus@gmail.com');
@@ -32,6 +30,4 @@ emailRegex({exact: true}).test('sindresorhus@gmail.com');
 //=> ['sindresorhus@gmail.com', 'john@doe.com']
 ```
 */
-declare function emailRegex(options?: emailRegex.Options): RegExp;
-
-export = emailRegex
+export default function emailRegex(options?: Options): RegExp;
