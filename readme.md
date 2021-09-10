@@ -6,6 +6,8 @@ Use it for finding email addresses or checking if something is email like.
 
 [You shouldn't use this for validating emails.](http://davidcel.is/blog/2012/09/06/stop-validating-email-addresses-with-regex/) Only for hinting to the user.
 
+If you use this on user input, it's up to you to limit the input to some reasonable length to prevent abuse.
+
 ## Install
 
 ```
