@@ -6,12 +6,10 @@ Use it for finding email addresses or checking if something is email like.
 
 [You shouldn't use this for validating emails.](https://davidcel.is/2012/09/06/stop-validating-email.html) Only for hinting to the user.
 
-If you use this on user input, it's up to you to limit the input to some reasonable length to prevent abuse.
-
 ## Install
 
-```
-$ npm install email-regex
+```sh
+npm install email-regex
 ```
 
 ## Usage
@@ -49,3 +47,9 @@ Default: `false` *(Matches any email address in a string)*
 Only match an exact string.
 
 Useful with `RegExp#test` to check if a string is an email address.
+
+## Important
+
+If you run the regex against untrusted user input in a server context, you should [give it a timeout](https://github.com/sindresorhus/super-regex). It's also a good idea to limit the input to a reasonable length.
+
+**I do not consider ReDoS a valid vulnerability for this package.**
