@@ -4,7 +4,7 @@
 
 Use it for finding email addresses or checking if something is email like.
 
-[You shouldn't use this for validating emails.](https://davidcel.is/2012/09/06/stop-validating-email.html) Only for hinting to the user.
+[You shouldn't use this for validating emails.](https://davidcel.is/articles/stop-validating-email-addresses-with-regex) Only for hinting to the user.
 
 ## Install
 
@@ -15,17 +15,17 @@ npm install email-regex
 ## Usage
 
 ```js
-import emailRegex from 'email-regex';
+import emailRegex from "email-regex";
 
 // Contains an email address
-emailRegex().test('unicorn sindresorhus@gmail.com');
+emailRegex().test("unicorn sindresorhus@gmail.com");
 //=> true
 
 // Is an email address
-emailRegex({exact: true}).test('sindresorhus@gmail.com');
+emailRegex({ exact: true }).test("sindresorhus@gmail.com");
 //=> true
 
-'unicorn sindresorhus@gmail.com cake john@doe.com rainbow'.match(emailRegex());
+"unicorn sindresorhus@gmail.com cake john@doe.com rainbow".match(emailRegex());
 //=> ['sindresorhus@gmail.com', 'john@doe.com']
 ```
 
@@ -42,7 +42,7 @@ Type: `object`
 ##### exact
 
 Type: `boolean`\
-Default: `false` *(Matches any email address in a string)*
+Default: `false` _(Matches any email address in a string)_
 
 Only match an exact string.
 
