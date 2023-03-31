@@ -15,17 +15,17 @@ npm install email-regex
 ## Usage
 
 ```js
-import emailRegex from "email-regex";
+import emailRegex from 'email-regex';
 
 // Contains an email address
-emailRegex().test("unicorn sindresorhus@gmail.com");
+emailRegex().test('unicorn sindresorhus@gmail.com');
 //=> true
 
 // Is an email address
-emailRegex({ exact: true }).test("sindresorhus@gmail.com");
+emailRegex({exact: true}).test('sindresorhus@gmail.com');
 //=> true
 
-"unicorn sindresorhus@gmail.com cake john@doe.com rainbow".match(emailRegex());
+'unicorn sindresorhus@gmail.com cake john@doe.com rainbow'.match(emailRegex());
 //=> ['sindresorhus@gmail.com', 'john@doe.com']
 ```
 
@@ -42,7 +42,7 @@ Type: `object`
 ##### exact
 
 Type: `boolean`\
-Default: `false` _(Matches any email address in a string)_
+Default: `false` *(Matches any email address in a string)*
 
 Only match an exact string.
 
