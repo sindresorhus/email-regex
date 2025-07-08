@@ -52,4 +52,4 @@ Useful with `RegExp#test` to check if a string is an email address.
 
 If you run the regex against untrusted user input in a server context, you should [give it a timeout](https://github.com/sindresorhus/super-regex). It's also a good idea to limit the input to a reasonable length.
 
-**I do not consider ReDoS a valid vulnerability for this package.**
+**I do not consider [ReDoS](https://blog.yossarian.net/2022/12/28/ReDoS-vulnerabilities-and-misaligned-incentives) a valid vulnerability for this package.**
